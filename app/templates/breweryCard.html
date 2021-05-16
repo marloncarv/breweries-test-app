@@ -1,0 +1,21 @@
+<div class="mt-4 mb-1">
+    <div class="card brewery-card" ng-click="goToDetails(obj)">
+        <div class="card-body">
+            <h5 class="card-title">
+                {{obj.name}}
+            </h5>
+            <p class="card-text">
+                {{obj.street}}
+            </p>
+            <p class="card-text">
+                {{obj.city}} {{obj.state}} - {{obj.postal_code}}
+            </p>
+            <p class="card-text">
+                {{obj.country}}
+            </p>
+        </div>
+        <div class="card-footer">
+            <span class="badge brew-type" ng-class="getBadgeClass(obj.brewery_type)">{{obj.brewery_type}}</span>
+        </div>
+    </div>
+</div>

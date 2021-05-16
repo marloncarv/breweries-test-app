@@ -1,0 +1,35 @@
+<div class="mb-1">
+    <div class="card brewery-card-detail">
+        <div class="card-body">
+            <h5 class="card-title">
+                {{obj.name}}
+            </h5>
+            <p class="card-text">
+                Type: {{obj.brewery_type || '---'}}
+            </p>
+            <p class="card-text">
+                Street: {{obj.street || '---'}}
+            </p>
+            <p class="card-text">
+                City: {{obj.city || '---'}}
+            </p><p class="card-text">
+                State: {{obj.state || '---'}}
+            </p>
+            <p class="card-text">
+                Postal code: {{obj.postal_code || '---'}}
+            </p>
+            <p class="card-text">
+                Country: {{obj.country || '---'}}
+            </p>
+            <p class="card-text" ng-if="obj.website_url">
+                Website: <a ng-href="{{obj.website_url}}" target="_blank">{{obj.website_url}}</a>
+            </p>
+            <p class="card-text">
+                Phone: {{obj.phone || '---'}}
+            </p>
+            <p class="card-text" ng-if="obj.latitude && obj.longitude">
+                Open in maps: <a ng-href="https://www.google.com/maps/search/?api=1&query={{obj.latitude}},{{obj.longitude}}" target="_blank">{{obj.latitude}},{{obj.longitude}}</a>
+            </p>
+        </div>
+    </div>
+</div>
